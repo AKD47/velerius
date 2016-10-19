@@ -1,0 +1,19 @@
+$OpenSansRegular: 'Open Sans Regular';
+$OpenSansSemibold: 'Open Sans Semibold';
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/OpenSans/OpenSansRegular.eot') format('embedded-opentype'),
+  url('../fonts/OpenSans/OpenSansRegular.woff2') format('woff2'),
+  url('../fonts/OpenSans/OpenSansRegular.woff') format('woff'),
+  url('../fonts/OpenSans/OpenSansRegular.ttf') format('truetype'),
+  url('../fonts/OpenSans/OpenSansRegular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
+  url('../fonts/OpenSans/OpenSansSemibold.woff2') format('woff2'),
+  url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
+  url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
+  url('../fonts/OpenSans/OpenSansSemibold.svg') format('svg');
+}
