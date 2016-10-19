@@ -17,10 +17,10 @@
     padding: 0;
     li {
       flex: 1 0 auto;
-      position: relative;
+      /*position: relative;*/
       float: left;
       text-align: center;
-      border: 1px solid transparent;
+      /*border: 1px solid transparent;*/
       padding: 19px 0px;
       @include border-box;
       a {
@@ -50,47 +50,143 @@
     }
     li:hover {
       background-color: #fdfdfd;
-      border: 1px solid #e4e4e4;
-      border-radius: 4px 4px 0 0;
+      /*border: 1px solid #e4e4e4;*/
+      /*border-radius: 4px 4px 0 0;*/
       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.24);
       .shevron{
         display: block;
       }
       .sub-menu {
-        height: 315px;
+        display: block;
+        opacity: 1;
+        box-shadow: 0 3px 12px 3px rgba(0,0,0,.24);
       }
     }
   }
   .shevron{
     display: none;
-    position: absolute;
+    position: relative;
     text-align: center;
-    bottom: 0;
+    bottom: -27px;
+    z-index: 1;
     left: 0;
     width: 100%;
-    height: 8px;
-    background-color: #fff;
+    height: 13px;
+    background-color: #fdfdfd;
     z-index: 2;
-    img{
+    background-image: url("../img/icons/shevron-down-icon.png");
+    background-repeat: no-repeat;
+    background-position: 70px 1px;
+    /*img{
       display: inline-block;
       position: absolute;
-    }
+    }*/
   }
   .sub-menu {
-    display: block;
+    display: none;
     position: absolute;
     top: 57px;
-    left: -1px;
-    width: 1187px;
-    height: 0px;
-    max-height: 315px;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 315px;
     float: left;
-    background-color: #fff;
     background-color: #fdfdfd;
-    border: 1px solid #e4e4e4;
     border-top: transparent;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 3px 12px 3px rgba(0, 0, 0, 0.24);
-    transition: height 0.5s;
+    &__left{
+      display: block;
+      position: relative;
+      width: 50%;
+      height: 100%;
+      float: left;
+      &--img{
+        display: block;
+        position: relative;
+        width: 211px;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      &--menu{
+        display: block;
+        position: relative;
+        width: 50%;
+        float: left;
+        padding-left: 30px;
+        @include border-box;
+        h3{
+          display: block;
+          position: relative;
+          width: 100%;
+          text-align: left;
+          float: left;
+          margin: 0;
+          margin-top: 31px;
+          margin-bottom: 11px;
+          padding: 0;
+          color: #2d2d2d;
+          font-family: $OpenSansRegular;
+          font-size: 22px;
+        }
+        ul{
+          display: block;
+          position: relative;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li{
+            position: relative;
+            width: 100%;
+            height: 26px;
+            margin: 3px 0px;
+            float: left;
+            border: none;
+            border-left: 4px solid #e3e3e3;
+            text-align: left;
+            padding-left: 17px;
+            padding: 0;
+            @include border-box;
+            a{
+              width: 100%;
+              color: #3d3f4a;
+              font-family: $OpenSansRegular;
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+          li:hover{
+            border: none;
+            border-left: 4px solid #6979f4;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
+            /*border: 1px solid transparent;*/
+            a{
+              color: #6979f4;
+            }
+          }
+          li:last-of-type{
+            a{
+              color: #3d3f4a;
+            }
+          }
+        }
+      }
+    }
+    &__right{
+      display: block;
+      position: relative;
+      width: 50%;
+      height: 100%;
+      float: left;
+
+    }
   }
 }
