@@ -58,7 +58,10 @@ function velerius_setup() {
 		'gallery',
 		'caption',
 	) );
-
+	//add woocommerce support
+	add_theme_support('woocommerce');
+	// disable woocommerce styles
+	//add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 }
 endif;
 add_action( 'after_setup_theme', 'velerius_setup' );
@@ -90,6 +93,8 @@ function velerius_scripts() {
 	wp_enqueue_style( 'velerius-style', get_template_directory_uri() . '/css/styles.min.css');
 	
     wp_enqueue_script( 'velerius-script-jq', get_template_directory_uri() . '/js/jquery-2.1.3.min.js', array(), '', true );
+    //wp_enqueue_script( 'velerius-script-autocomplete', get_template_directory_uri() . '/js/jquery.autocomplete.min.js', array(), '', true );
+    wp_enqueue_script( 'velerius-script-common', get_template_directory_uri() . '/js/common.js', array(), '', true );
     wp_enqueue_script( 'velerius-script', get_template_directory_uri() . '/js/script.min.js', array(), '', true );
 }
 
@@ -99,3 +104,8 @@ add_action( 'wp_enqueue_scripts', 'velerius_scripts' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ *  TGM Plugin activator.
+ */
+require get_template_directory() . '/tgm/velerius.php';
