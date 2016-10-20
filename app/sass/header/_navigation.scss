@@ -63,14 +63,20 @@
       }*/
     }
   }
+  .active{
+    background-color: #fdfdfd;
+    /*border: 1px solid #e4e4e4;*/
+    /*border-radius: 4px 4px 0 0;*/
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.24);
+  }
   .shevron{
     display: none;
     position: relative;
     text-align: center;
     bottom: -27px;
     z-index: 1;
-    left: 0;
-    width: 100%;
+    left: 3px;
+    width: calc(100% - 6px);
     height: 13px;
     background-color: #fdfdfd;
     z-index: 2;
